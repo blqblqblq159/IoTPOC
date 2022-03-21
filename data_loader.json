@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Sheet1","startColumn":"A","endColumn":"A","startRow":"2","endRow":"+","comment":"","rule":"Individual: @A*(mm:hashEncode)\nTypes: Observation\nFacts: madeBySensor SmokeDetector,\n\tresultTime @B*(xsd:dateTime),\n\thasSimpleResult @C*(xsd:double)\nAnnotations: rdfs:label @B*(mm:prepend(\"Observatino made by smoke detector at \"))","active":true}]}

@@ -1,0 +1,47 @@
+Date: 2022-03-21 17:13:42
+Ontology source: /Users/wannesdebreuck/Documents/werk-map/sosa-with-data/sosa-with-data.owl
+Worksheet source: /Users/wannesdebreuck/Documents/werk-map/IoTSmartHomeOntologySimulator/one_sensor_test/onto.xlsx
+Transformation rules: /Users/wannesdebreuck/Documents/werk-map/sosa-with-data/onto_rules.json
+
+# Cell range: (Sheet1!A2:A+) Comment: ""
+# Individual: @D*
+# Types: Procedure
+
+Individual: ReflectionDetection  # Generated from value "ReflectionDetection" located at cell 'Sheet1'!D2.
+   Types: Procedure
+
+# Cell range: (Sheet1!A2:A+) Comment: ""
+# Individual: @C*
+# Types: ObservableProperty
+# Facts: isObservedBy @B*
+
+Individual: SmokeParticles  # Generated from value "SmokeParticles" located at cell 'Sheet1'!C2.
+   Facts: isObservedBy "SmokeDetector"  # Generated from value "SmokeDetector" located at cell 'Sheet1'!B2.
+   Types: ObservableProperty
+
+# Cell range: (Sheet1!A2:A+) Comment: ""
+# Individual: @E*
+# Types: FeatureOfInterest
+
+Individual: KitchenSmokeStatus  # Generated from value "KitchenSmokeStatus" located at cell 'Sheet1'!E2.
+   Types: FeatureOfInterest
+
+# Cell range: (Sheet1!A2:A+) Comment: ""
+# Individual: @A*
+# Types: Platform
+
+Individual: Kitchen  # Generated from value "Kitchen" located at cell 'Sheet1'!A2.
+   Types: Platform
+
+# Cell range: (Sheet1!A2:A+) Comment: ""
+# Individual: @B*
+# Types: Sensor
+# Facts: isHostedBy @A*,
+# 	usedProcedure @D*
+
+Individual: SmokeDetector  # Generated from value "SmokeDetector" located at cell 'Sheet1'!B2.
+   Facts: isHostedBy "Kitchen"  # Generated from value "Kitchen" located at cell 'Sheet1'!A2.,
+         usedProcedure "ReflectionDetection"  # Generated from value "ReflectionDetection" located at cell 'Sheet1'!D2.
+   Types: Sensor
+
+===========================================================================================================
